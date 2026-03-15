@@ -824,6 +824,7 @@ function AboutSection() {
                     style={{
                       border: "2px solid rgba(46,91,255,0.4)",
                       boxShadow: "0 0 32px rgba(46,91,255,0.15)",
+                      filter: "brightness(0.9)",
                     }}
                   />
                   <span
