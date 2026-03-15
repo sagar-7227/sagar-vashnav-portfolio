@@ -1,0 +1,27 @@
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "D:\\OneDrive\\Desktop\\sagar-vashnav-portfolio\\src\\frontend\\dist"
+publishOrigin = "ui"
+commandOrigin = "ui"
+command = "pnpm --filter @caffeine/template-frontend... run build"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]

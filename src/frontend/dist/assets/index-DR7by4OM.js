@@ -14153,7 +14153,7 @@ function Terminal() {
     }
   );
 }
-const ServerCanvas = reactExports.lazy(() => __vitePreload(() => import("./ServerCanvas-Ba0UKXfB.js"), true ? [] : void 0));
+const ServerCanvas = reactExports.lazy(() => __vitePreload(() => import("./ServerCanvas-DQ7gJb1A.js"), true ? [] : void 0));
 const NAV_LINKS = [
   { label: "About", href: "#about", ocid: "nav.link.1" },
   { label: "Experience", href: "#experience", ocid: "nav.link.2" },
@@ -15002,7 +15002,7 @@ function AboutSection() {
                 style: {
                   border: "2px solid rgba(46,91,255,0.4)",
                   boxShadow: "0 0 32px rgba(46,91,255,0.15)",
-                  filter: "brightness(0.85)"
+                  filter: "brightness(0.9)"
                 }
               }
             ),
@@ -15870,21 +15870,6 @@ function Footer() {
                 ),
                 "GitHub"
               ]
-            }
-          )
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mt-3 text-xs", style: { color: "rgba(240,240,255,0.25)" }, children: [
-          "Built with love using",
-          " ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "a",
-            {
-              href: `https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(typeof window !== "undefined" ? window.location.hostname : "")}`,
-              target: "_blank",
-              rel: "noopener noreferrer",
-              className: "hover:underline",
-              style: { color: "rgba(46,91,255,0.6)" },
-              children: "caffeine.ai"
             }
           )
         ] })
