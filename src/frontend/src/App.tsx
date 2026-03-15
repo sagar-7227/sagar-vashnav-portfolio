@@ -813,49 +813,72 @@ function AboutSection() {
           <SectionHeader title="About Me" />
         </SectionReveal>
         <SectionReveal delay={100}>
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="glass-card rounded-2xl p-8 md:p-10">
-              <p
-                className="text-lg leading-relaxed mb-6"
-                style={{ color: "rgba(240,240,255,0.82)" }}
-              >
-                I'm{" "}
-                <span style={{ color: "#2E5BFF", fontWeight: 700 }}>
-                  Sagar Vashnav
-                </span>
-                , a Software Development Engineer with 2+ years of experience
-                building enterprise-grade Java backend systems. Currently at{" "}
-                <strong style={{ color: "rgba(240,240,255,0.95)" }}>
-                  Starhealth Insurance
-                </strong>
-                , I architect microservices that power 40+ internal applications
-                and process over 100,000 documents monthly.
-              </p>
-              <p
-                className="text-lg leading-relaxed mb-6"
-                style={{ color: "rgba(240,240,255,0.75)" }}
-              >
-                My expertise spans{" "}
-                <strong style={{ color: "rgba(240,240,255,0.9)" }}>
-                  event-driven architectures
-                </strong>{" "}
-                with Apache Kafka,{" "}
-                <strong style={{ color: "rgba(240,240,255,0.9)" }}>
-                  Spring Boot microservices
-                </strong>
-                , and platform security using Keycloak SSO and RSA/AES
-                encryption. I'm passionate about building distributed systems
-                that scale reliably and perform under pressure.
-              </p>
-              <p
-                style={{ color: "rgba(240,240,255,0.65)" }}
-                className="text-base leading-relaxed"
-              >
-                Beyond work, I'm a Linux Kernel Mentee (CNCF/LFX), a patent
-                holder, and an active contributor to open-source infrastructure
-                tooling. I've solved 1000+ DSA problems and was awarded the Dan
-                Kohn Scholarship for KubeCon North America.
-              </p>
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div className="flex-shrink-0 flex flex-col items-center">
+                  <img
+                    src="/assets/generated/sagar-photo-enhanced.dim_400x500.jpg"
+                    alt="Sagar Vashnav"
+                    className="w-36 h-44 md:w-44 md:h-56 rounded-2xl object-cover object-center"
+                    style={{
+                      border: "2px solid rgba(46,91,255,0.4)",
+                      boxShadow: "0 0 32px rgba(46,91,255,0.15)",
+                    }}
+                  />
+                  <span
+                    className="mt-3 text-xs font-semibold tracking-widest uppercase"
+                    style={{ color: "#2E5BFF" }}
+                  >
+                    Backend Engineer
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <p
+                    className="text-lg leading-relaxed mb-6"
+                    style={{ color: "rgba(240,240,255,0.82)" }}
+                  >
+                    I'm{" "}
+                    <span style={{ color: "#2E5BFF", fontWeight: 700 }}>
+                      Sagar Vashnav
+                    </span>
+                    , a Software Development Engineer with 2+ years of
+                    experience building enterprise-grade Java backend systems.
+                    Currently at{" "}
+                    <strong style={{ color: "rgba(240,240,255,0.95)" }}>
+                      Starhealth Insurance
+                    </strong>
+                    , I architect microservices that power 40+ internal
+                    applications and process over 100,000 documents monthly.
+                  </p>
+                  <p
+                    className="text-lg leading-relaxed mb-6"
+                    style={{ color: "rgba(240,240,255,0.75)" }}
+                  >
+                    My expertise spans{" "}
+                    <strong style={{ color: "rgba(240,240,255,0.9)" }}>
+                      event-driven architectures
+                    </strong>{" "}
+                    with Apache Kafka,{" "}
+                    <strong style={{ color: "rgba(240,240,255,0.9)" }}>
+                      Spring Boot microservices
+                    </strong>
+                    , and platform security using Keycloak SSO and RSA/AES
+                    encryption. I'm passionate about building distributed
+                    systems that scale reliably and perform under pressure.
+                  </p>
+                  <p
+                    style={{ color: "rgba(240,240,255,0.65)" }}
+                    className="text-base leading-relaxed"
+                  >
+                    Beyond work, I'm a Linux Kernel Mentee (CNCF/LFX), a patent
+                    holder, and an active contributor to open-source
+                    infrastructure tooling. I've solved 1000+ DSA problems and
+                    was awarded the Dan Kohn Scholarship for KubeCon North
+                    America.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </SectionReveal>
