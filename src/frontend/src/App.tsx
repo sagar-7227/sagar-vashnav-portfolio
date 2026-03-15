@@ -1705,18 +1705,6 @@ function Footer() {
           GitHub
         </a>
       </div>
-      <p className="mt-3 text-xs" style={{ color: "rgba(240,240,255,0.25)" }}>
-        Built with love using{" "}
-        <a
-          href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(typeof window !== "undefined" ? window.location.hostname : "")}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline"
-          style={{ color: "rgba(46,91,255,0.6)" }}
-        >
-          caffeine.ai
-        </a>
-      </p>
     </footer>
   );
 }
