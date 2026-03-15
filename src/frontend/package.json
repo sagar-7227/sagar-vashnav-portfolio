@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "build:skip-bindings": "vite build && pnpm copy:env",
-    "build": "vite build && pnpm copy:env",
-    "copy:env": "cp env.json dist/",
+    "build": "vite build && pnpm copy:env && xcopy ..\\..\\frontend\\public\\assets dist\\assets /E /I /Y",
+    "copy:env": "copy env.json dist && copy .ic-assets.json5 dist",
     "typecheck": "tsc --noEmit --incremental --tsBuildInfoFile node_modules/.cache/tsconfig.tsbuildinfo --pretty",
     "check": "biome check src",
     "fix": "biome check --write src"

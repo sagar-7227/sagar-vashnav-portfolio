@@ -824,6 +824,7 @@ function AboutSection() {
                     style={{
                       border: "2px solid rgba(46,91,255,0.4)",
                       boxShadow: "0 0 32px rgba(46,91,255,0.15)",
+                      filter: "brightness(0.85)",
                     }}
                   />
                   <span
@@ -1595,7 +1596,7 @@ function ContactSection() {
               </div>
 
               <a
-                href="https://www.linkedin.com/in/sagarvashnav/"
+                href="https://www.linkedin.com/in/sagar-vashnav/"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-ocid="contact.link.2"
@@ -1665,7 +1666,7 @@ function Footer() {
       </p>
       <div className="flex justify-center gap-4 mt-3">
         <a
-          href="https://www.linkedin.com/in/sagarvashnav/"
+          href="https://www.linkedin.com/in/sagar-vashnav/"
           target="_blank"
           rel="noopener noreferrer"
           data-ocid="footer.link.1"
