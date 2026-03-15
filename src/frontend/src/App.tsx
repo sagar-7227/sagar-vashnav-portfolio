@@ -680,7 +680,6 @@ function HeroSection() {
               </a>
               <a
                 href="/assets/uploads/Sagar_Vashnav_Java_Backend_2Years-1.pdf"
-                download="Sagar_Vashnav_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-ocid="hero.secondary_button"
