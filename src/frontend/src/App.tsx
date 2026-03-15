@@ -12,7 +12,7 @@ interface NavLink {
 
 const NAV_LINKS: NavLink[] = [
   { label: "About", href: "#about", ocid: "nav.link.1" },
-  { label: "Experience", href: "#about", ocid: "nav.link.2" },
+  { label: "Experience", href: "#experience", ocid: "nav.link.2" },
   { label: "Projects", href: "#projects", ocid: "nav.link.3" },
   { label: "Stack", href: "#stack", ocid: "nav.link.4" },
   { label: "Achievements", href: "#achievements", ocid: "nav.link.5" },
@@ -139,7 +139,7 @@ const PROJECTS = [
       "Redis caching layer for intermediate state",
     ],
     stack: ["Spring Boot", "Reactor WebClient", "Kafka", "Redis", "MySQL"],
-    githubUrl: "https://github.com/sagar-7227/file-processor-service",
+    githubUrl: "https://github.com/sagar-7227/",
     ocid: "projects.card.1",
     showDiagram: false,
   },
@@ -162,7 +162,7 @@ const PROJECTS = [
       "Spring Security integration with role-based access",
     ],
     stack: ["Keycloak", "Spring Boot", "Jenkins", "Azure AD", "Okta", "Docker"],
-    githubUrl: "https://github.com/sagar-7227/sso-application",
+    githubUrl: "https://github.com/sagar-7227/",
     ocid: "projects.card.2",
     showDiagram: false,
   },
@@ -184,7 +184,7 @@ const PROJECTS = [
       "REST API with Spring Security",
     ],
     stack: ["Spring Boot", "OpenAI API", "JWT", "Docker", "MySQL"],
-    githubUrl: "https://github.com/sagar-7227/ai-code-review-tool",
+    githubUrl: "https://github.com/sagar-7227/",
     ocid: "projects.card.3",
     showDiagram: false,
   },
@@ -577,7 +577,7 @@ function HeroSection() {
                   border: "1px solid rgba(46,91,255,0.3)",
                 }}
               >
-                Sagar Vashnav | Software Development Engineer
+                Available for Opportunities · Backend Engineer
               </span>
             </div>
 
@@ -801,16 +801,79 @@ function ImpactSection() {
   );
 }
 
-function ExperienceSection() {
+function AboutSection() {
   return (
     <section
       id="about"
+      className="py-24"
+      style={{ background: "#080810", scrollMarginTop: "80px" }}
+    >
+      <div className="max-w-6xl mx-auto px-6">
+        <SectionReveal>
+          <SectionHeader title="About Me" />
+        </SectionReveal>
+        <SectionReveal delay={100}>
+          <div className="max-w-3xl mx-auto">
+            <div className="glass-card rounded-2xl p-8 md:p-10">
+              <p
+                className="text-lg leading-relaxed mb-6"
+                style={{ color: "rgba(240,240,255,0.82)" }}
+              >
+                I'm{" "}
+                <span style={{ color: "#2E5BFF", fontWeight: 700 }}>
+                  Sagar Vashnav
+                </span>
+                , a Software Development Engineer with 2+ years of experience
+                building enterprise-grade Java backend systems. Currently at{" "}
+                <strong style={{ color: "rgba(240,240,255,0.95)" }}>
+                  Starhealth Insurance
+                </strong>
+                , I architect microservices that power 40+ internal applications
+                and process over 100,000 documents monthly.
+              </p>
+              <p
+                className="text-lg leading-relaxed mb-6"
+                style={{ color: "rgba(240,240,255,0.75)" }}
+              >
+                My expertise spans{" "}
+                <strong style={{ color: "rgba(240,240,255,0.9)" }}>
+                  event-driven architectures
+                </strong>{" "}
+                with Apache Kafka,{" "}
+                <strong style={{ color: "rgba(240,240,255,0.9)" }}>
+                  Spring Boot microservices
+                </strong>
+                , and platform security using Keycloak SSO and RSA/AES
+                encryption. I'm passionate about building distributed systems
+                that scale reliably and perform under pressure.
+              </p>
+              <p
+                style={{ color: "rgba(240,240,255,0.65)" }}
+                className="text-base leading-relaxed"
+              >
+                Beyond work, I'm a Linux Kernel Mentee (CNCF/LFX), a patent
+                holder, and an active contributor to open-source infrastructure
+                tooling. I've solved 1000+ DSA problems and was awarded the Dan
+                Kohn Scholarship for KubeCon North America.
+              </p>
+            </div>
+          </div>
+        </SectionReveal>
+      </div>
+    </section>
+  );
+}
+
+function ExperienceSection() {
+  return (
+    <section
+      id="experience"
       className="py-24"
       style={{ background: "#0D0D14", scrollMarginTop: "80px" }}
     >
       <div className="max-w-6xl mx-auto px-6">
         <SectionReveal>
-          <SectionHeader title="Core Experience" />
+          <SectionHeader title="Experience" />
         </SectionReveal>
 
         <SectionReveal>
@@ -1485,6 +1548,29 @@ function ContactSection() {
                 </a>
               </div>
 
+              <div className="glass-card rounded-xl p-6">
+                <div
+                  className="text-xs font-mono-code mb-2"
+                  style={{ color: "rgba(240,240,255,0.4)" }}
+                >
+                  PHONE
+                </div>
+                <a
+                  href="tel:+918130693228"
+                  data-ocid="contact.link.3"
+                  className="font-mono-code text-lg font-bold transition-colors duration-200"
+                  style={{ color: "#2E5BFF" }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLElement).style.color = "#6B8FFF";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLElement).style.color = "#2E5BFF";
+                  }}
+                >
+                  +91 8130693228
+                </a>
+              </div>
+
               <a
                 href="https://www.linkedin.com/in/sagarvashnav/"
                 target="_blank"
@@ -1619,6 +1705,7 @@ export default function App() {
       <main>
         <HeroSection />
         <ImpactSection />
+        <AboutSection />
         <ExperienceSection />
         <ProjectsSection />
         <StackSection />
