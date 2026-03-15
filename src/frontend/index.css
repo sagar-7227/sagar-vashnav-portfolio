@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+@font-face {
+  font-family: 'BricolageGrotesque';
+  src: url('/assets/fonts/BricolageGrotesque.woff2') format('woff2');
+  font-weight: 200 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('/assets/fonts/GeneralSans.woff2') format('woff2');
+  font-weight: 200 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('/assets/fonts/JetBrainsMono.woff2') format('woff2');
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Midnight Onyx – dark by default */
+    --background: 0.07 0.008 285;
+    --foreground: 0.97 0 0;
+    --card: 0.1 0.01 285;
+    --card-foreground: 0.97 0 0;
+    --popover: 0.1 0.01 285;
+    --popover-foreground: 0.97 0 0;
+    /* Electric Cobalt primary */
+    --primary: 0.48 0.22 265;
+    --primary-foreground: 0.97 0 0;
+    /* Cyber Lime secondary */
+    --secondary: 0.93 0.27 127;
+    --secondary-foreground: 0.07 0.008 285;
+    --muted: 0.15 0.01 285;
+    --muted-foreground: 0.6 0.01 285;
+    --accent: 0.48 0.22 265;
+    --accent-foreground: 0.97 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.97 0 0;
+    --border: 0.97 0 0 / 8%;
+    --input: 0.97 0 0 / 12%;
+    --ring: 0.48 0.22 265;
+    --chart-1: 0.48 0.22 265;
+    --chart-2: 0.93 0.27 127;
+    --chart-3: 0.6 0.15 285;
+    --chart-4: 0.7 0.18 127;
+    --chart-5: 0.5 0.2 300;
+    --sidebar: 0.09 0.01 285;
+    --sidebar-foreground: 0.97 0 0;
+    --sidebar-primary: 0.48 0.22 265;
+    --sidebar-primary-foreground: 0.97 0 0;
+    --sidebar-accent: 0.15 0.01 285;
+    --sidebar-accent-foreground: 0.97 0 0;
+    --sidebar-border: 0.97 0 0 / 8%;
+    --sidebar-ring: 0.48 0.22 265;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'GeneralSans', sans-serif;
+    background-color: #0A0A0F;
+    color: #F0F0FF;
+  }
+}
+
+/* Custom utilities */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(46, 91, 255, 0.2);
+}
+
+.cobalt-glow {
+  box-shadow: 0 0 60px rgba(46, 91, 255, 0.15);
+}
+
+.cobalt-text-glow {
+  text-shadow: 0 0 30px rgba(46, 91, 255, 0.5);
+}
+
+.lime-glow {
+  box-shadow: 0 0 40px rgba(170, 255, 0, 0.2);
+}
+
+.section-title-glow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 100px;
+  background: radial-gradient(ellipse, rgba(46, 91, 255, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.font-mono-code {
+  font-family: 'JetBrainsMono', monospace;
+}
+
+.font-display {
+  font-family: 'BricolageGrotesque', sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0F;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(46, 91, 255, 0.4);
+  border-radius: 3px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(46, 91, 255, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(46, 91, 255, 0.6); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
